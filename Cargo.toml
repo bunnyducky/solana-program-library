@@ -43,6 +43,10 @@ members = [
   "utils/cgen",
   "utils/test-client",
   "token-lending/flash_loan_receiver",
+  "libraries/math",
+  "token-swap/program",
+  "token-swap/program/fuzz",
+  "token/program",
 ]
 exclude = [
   "farms/farm-client",
@@ -55,6 +59,9 @@ exclude = [
   "farms/router-saber",
   "farms/router-orca",
   "farms/vaults",
+  "themis/client_ristretto",
+  "themis/program_ristretto",
+  "token/perf-monitor",       # TODO: Rework perf-monitor to use solana-program-test, avoiding the need to link directly with the BPF VM
 ]
 
 [profile.dev]
