@@ -7,9 +7,9 @@
   "license": "Apache License 2.0",
   "scripts": {
     "buildVerifiable": "./node_modules/.bin/anchor build --docker-image projectserum/build:v0.25.0 --verifiable --program-name spl_token_swap",
-    "verifyBuffer": "./node_modules/.bin/anchor verify --provider.cluster mainnet -p spl_token_swap 427VgnGg2oNSaPaDpjnQbfzcNnWxouvonayUKW8uaudm ",
-    "verifyProgram": "./node_modules/.bin/anchor verify --provider.cluster mainnet -p spl_token_swap PSwapMdSai8tjrEXcxFeQth87xC4rRsa4VA5mhGhXkP",
-    "anchorPublish": "./node_modules/.bin/anchor publish --provider.cluster mainnet spl_token_swap"
+    "verifyBuffer": "cd token-swap && ../node_modules/.bin/anchor verify --provider.cluster mainnet -p spl_token_swap 427VgnGg2oNSaPaDpjnQbfzcNnWxouvonayUKW8uaudm ",
+    "verifyProgram": "cd token-swap && ../node_modules/.bin/anchor verify --provider.cluster mainnet -p spl_token_swap PSwapMdSai8tjrEXcxFeQth87xC4rRsa4VA5mhGhXkP",
+    "anchorPublish": "cd token-swap && ../node_modules/.bin/anchor publish --provider.cluster mainnet spl_token_swap"
   },
   "devDependencies": {
     "@project-serum/anchor-cli": "^0.24.2"
