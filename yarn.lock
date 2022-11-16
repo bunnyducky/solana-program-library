@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@project-serum/anchor-cli@0.20.1":
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/@project-serum/anchor-cli/-/anchor-cli-0.20.1.tgz#766a924debba0207abc515b5aae3190308b0f926"
-  integrity sha512-4v7RTIHl2DqBQN/MgDHsxOiZl1iwqakY5elVgrtdfoIh+lSKIiZanXaB2my0sU6tPUI++FqFnpziZnJxj3IV/Q==
+"@project-serum/anchor-cli@^0.24.2":
+  version "0.24.2"
+  resolved "https://registry.npmmirror.com/@project-serum/anchor-cli/-/anchor-cli-0.24.2.tgz#5276e9e9f55bd7b0c18e246c67ab02ad053c26b3"
+  integrity sha512-3D+fB3n/PAmY5AF2P+zxNvV2ZKx6YLoDlqHXqFa7wGqxVZfTo4WM2O7ChJjU2WIxS/WoTt6qXnehbuGUJ1JXig==
