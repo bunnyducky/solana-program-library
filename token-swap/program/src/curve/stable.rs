@@ -258,6 +258,7 @@ impl CurveCalculator for StableCurve {
         swap_token_b_amount: u128,
         pool_supply: u128,
         trade_direction: TradeDirection,
+        _round_direction: RoundDirection, //unused
     ) -> Option<u128> {
         if source_amount == 0 {
             return Some(0);
@@ -505,7 +506,7 @@ mod tests {
     proptest! {
         #[test]
         fn curve_value_does_not_decrease_from_withdraw(
-            (pool_token_supply, pool_token_amount) in total_and_intermediate(),
+            (pool_token_supply, pool_token_amount) in total_and_intermediate(u64::MAX),
             swap_token_a_amount in 1..u64::MAX,
             swap_token_b_amount in 1..u64::MAX,
             amp in 1..100,
@@ -587,7 +588,7 @@ mod tests {
     proptest! {
         #[test]
         fn withdraw_token_conversion(
-            (pool_token_supply, pool_token_amount) in total_and_intermediate(),
+            (pool_token_supply, pool_token_amount) in total_and_intermediate(u64::MAX),
             swap_token_a_amount in 1..u64::MAX,
             swap_token_b_amount in 1..u64::MAX,
             amp in 1..100u64,
