@@ -1716,6 +1716,8 @@ mod tests {
             destination_token_amount: u64,
             maximum_pool_token_amount: u64,
         ) -> ProgramResult {
+            return Err(SwapError::InvalidInstruction.into()); //disabled this instruction
+
             let user_transfer_authority_key = Pubkey::new_unique();
             // approve user transfer authority to take out pool tokens
             do_process_instruction(
