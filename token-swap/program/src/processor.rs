@@ -848,6 +848,8 @@ impl Processor {
         maximum_pool_token_amount: u64,
         accounts: &[AccountInfo],
     ) -> ProgramResult {
+        return Err(SwapError::InvalidInstruction.into()); //disabled this instruction
+
         let account_info_iter = &mut accounts.iter();
         let swap_info = next_account_info(account_info_iter)?;
         let authority_info = next_account_info(account_info_iter)?;
