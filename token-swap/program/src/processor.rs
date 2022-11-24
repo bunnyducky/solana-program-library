@@ -848,6 +848,8 @@ impl Processor {
         maximum_pool_token_amount: u64,
         accounts: &[AccountInfo],
     ) -> ProgramResult {
+        return Err(SwapError::InvalidInstruction.into()); //disabled this instruction
+
         let account_info_iter = &mut accounts.iter();
         let swap_info = next_account_info(account_info_iter)?;
         let authority_info = next_account_info(account_info_iter)?;
@@ -1716,8 +1718,6 @@ mod tests {
             destination_token_amount: u64,
             maximum_pool_token_amount: u64,
         ) -> ProgramResult {
-            return Err(SwapError::InvalidInstruction.into()); //disabled this instruction
-
             let user_transfer_authority_key = Pubkey::new_unique();
             // approve user transfer authority to take out pool tokens
             do_process_instruction(
